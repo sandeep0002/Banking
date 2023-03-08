@@ -15,7 +15,11 @@ public class EmployeeService {
 	public EmployeeLogin login(String username, String password) {
 		
 		EmployeeLogin employee = repo.findByUsernameAndPassword(username, password);
+		if(employee.getUsername().equals(username) && employee.getPassword().equals(password)) {
 		return employee;
+		} else {
+			return null;
+		}
 	}
 
 }

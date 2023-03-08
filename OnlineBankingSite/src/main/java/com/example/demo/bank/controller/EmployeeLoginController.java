@@ -21,9 +21,14 @@ public class EmployeeLoginController {
 	
 	@PostMapping("/login")
 	public ResponseEntity<EmployeeLogin> login(@RequestBody EmployeeLogin employee) {
-	
+	     
 		 EmployeeLogin authEmployee = employeeService.login(employee.getUsername() ,employee.getPassword());
+		 if(authEmployee!=null) {
 		 return new ResponseEntity<>(authEmployee,HttpStatus.OK); 
+		 } else {
+			 return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		 }
+	     
 	}
 
 }
