@@ -1,14 +1,17 @@
 package com.example.demo.bank.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="employee_credentials")
+@Table(name="employee_credential")
 public class EmployeeLogin {
 	
-	private String employeeName;
+
+    @Id
 	private Long employeeId;
+	private String username;
 	private String password;
 	private String employeeDesig;
 	
@@ -16,20 +19,12 @@ public class EmployeeLogin {
 		
 	}
 
-	public EmployeeLogin(String employeeName, Long employeeId, String password, String employeeDesig) {
+	public EmployeeLogin(Long employeeId, String username, String password, String employeeDesig) {
 		super();
-		this.employeeName = employeeName;
 		this.employeeId = employeeId;
+		this.username = username;
 		this.password = password;
 		this.employeeDesig = employeeDesig;
-	}
-
-	public String getEmployeeName() {
-		return employeeName;
-	}
-
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
 	}
 
 	public Long getEmployeeId() {
@@ -38,6 +33,14 @@ public class EmployeeLogin {
 
 	public void setEmployeeId(Long employeeId) {
 		this.employeeId = employeeId;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -55,7 +58,5 @@ public class EmployeeLogin {
 	public void setEmployeeDesig(String employeeDesig) {
 		this.employeeDesig = employeeDesig;
 	}
-	
-	
 
 }

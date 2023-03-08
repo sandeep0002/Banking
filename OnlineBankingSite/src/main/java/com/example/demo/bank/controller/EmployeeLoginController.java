@@ -22,7 +22,7 @@ public class EmployeeLoginController {
 	@PostMapping("/login")
 	public ResponseEntity<EmployeeLogin> login(@RequestBody EmployeeLogin employee) {
 	
-		 EmployeeLogin authEmployee = employeeService.login(employee.getEmployeeName(), employee.getPassword());
+		 EmployeeLogin authEmployee = employeeService.login(employee.getUsername() ,employee.getPassword());
 		 return new ResponseEntity<>(authEmployee,HttpStatus.OK); 
 	}
 
