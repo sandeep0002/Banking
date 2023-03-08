@@ -1,0 +1,26 @@
+header{
+    padding: 10px 0;
+    background: #7f4282;
+}
+
+.menu{
+
+}
+
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    list-style-type: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20%;
+}
+
+img{
+    height: 10%;
+    margin-left: -70%;
+}

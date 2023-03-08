@@ -1,0 +1,29 @@
+.card{
+    margin-top: 10px;
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgb(138, 74, 149);
+}
+
+.card h1,h4,
+h6{
+    color: #fff;
+}
+
+h4{
+    margin-left: 18%;
+}
+
+label{
+    color: #fff;
+}
+
+
+.btn {
+    margin-top: 5%;
+    margin-left: 40%;
+}
