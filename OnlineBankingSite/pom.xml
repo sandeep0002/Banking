@@ -78,9 +78,9 @@
 						</goals>
 						<configuration>
 							<nodeVersion>
-								18.14.2
+								v18.14.2
 							</nodeVersion>
-							<npmVersion>9.5.0</npmVersion>
+							<npmVersion>3.10.8</npmVersion>
 						</configuration>
 					</execution>
 					<execution>
